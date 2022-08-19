@@ -12,4 +12,4 @@ Web based CV created with Jade(pug) and Sass with prepros compiler.
 - Contact and Profiles
 - Skills
 - Education details
-- Downloadable button for downloading CV in jpeg and pdf form
+- Download button for downloading CV in jpeg and pdf form
