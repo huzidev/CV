@@ -7,7 +7,7 @@ Web based CV created with Jade(pug) and Sass with prepros compiler.
 - Sass
 - prepros (compiler)
 
-## Includes
+## CV Includes
 
 - Contact and Profiles
 - Skills
