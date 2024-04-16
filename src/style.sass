@@ -4,18 +4,23 @@
     box-sizing: border-box
     
 :root 
+    --heading-font-size: 25px
+    --base-font-size: 16px
+    --primary-color: #000
     --color: #000
+    --primary-font-weight: 600
     --surface: #fff
     --background: #f0f0f0
     --border: #efefef
     --shadow: rgba(0,0,0,0.05)
-    --width: 1100px 
+    --max-width: 1200px 
     --padding: 25px 0px
+    --container-padding: 25px 0px
     --margin-bottom: 20px
+    --container-margin: 20px
     --margin: auto
-    --font-weight: 600
+    --base-font-weight: 600
     --font-size: 25px
-    --letter-spacing: 1px
 
 body
     background-color: var(--background)
@@ -23,4 +28,5 @@ body
 
 
 @import "components/index.sass"
-@import "global/index.sass"
+@import "global/container.sass"
+@import "global/font.sass"

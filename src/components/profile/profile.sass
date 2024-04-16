@@ -1,131 +1,41 @@
-.status
-    font-size: 16px
-    font-weight: var(--font-weight)
+@import "global/mixins.sass"
+
+.content
+    @include flex-properties(column, normal, flex-start)
+
+h3
+    @include heading-properties(var(--base-font-size), var(--base-font-weight))
+
 .contact
-    font-size: 19px
-    font-weight: 500
+    @include heading-properties(calc(var(--base-font-size) + 3px), 500)
     margin: 13px 0px 4px 0px
+
 .profiles
     a
         text-decoration: none
-    .link
         color: var(--color)
-        width: 27%
         display: flex
         align-items: center
+        gap: 30px
         text-align: center
         border-radius: 9px
         border: 1px solid var(--border)
-        padding: 10px
-        margin: 10px 0px
-        font-weight: var(--font-weight)
+        padding: 10px 20px
+        margin: 13px 0px
+        font-weight: var(--base-font-weight)
         cursor: pointer
         box-shadow: 1px 1px 2px var(--shadow)
         transition: all 250ms ease-in-out
+
+        @include breakpoint(sm) 
+            padding: 10px
+            gap: 20px
         i
-            width: 10%
+            flex: 0.1
             font-size: 16px
-            margin-left: 5px
         p   
-            width: 90%
-            font-size: 16px
+            flex: 0.8
+            font-size: var(--base-font-size)
             font-weight: var(--font-weight)
         &:hover
             box-shadow: 2px 2px 4px 1px var(--shadow)
-
-@media only screen and (max-width: 1150px)
-    .status
-        font-size: 15px
-    .contact
-        font-size: 18.5px
-    .profiles
-        .link
-            width: 28%
-            i
-                font-size: 15px
-            p
-                font-size: 14px
-
-@media only screen and (max-width: 950px)
-    .status
-        font-size: 14px
-    .contact
-        font-size: 18px
-    .profiles
-        .link
-            width: 31%
-            i
-                font-size: 14px
-            p
-                font-size: 13px
-
-
-@media only screen and (max-width: 800px)
-    .status
-        font-size: 13px
-    .contact
-        font-size: 17.5px
-    .profiles
-        .link
-            padding: 8px
-            width: 37%
-            i
-                font-size: 13px
-            p
-                font-size: 12px
-
-@media only screen and (max-width: 650px)
-    .status
-        font-size: 12px
-    .contact
-        font-size: 17px
-    .profiles
-        .link
-            padding: 7px
-            width: 39%
-            i
-                font-size: 12px
-            p
-                font-size: 11px
-
-@media only screen and (max-width: 550px)
-    .status
-        font-size: 11px
-    .contact
-        font-size: 16px
-    .profiles
-        .link
-            padding: 6px
-            width: 53%
-            i
-                font-size: 11px
-            p
-                font-size: 10px
-
-@media only screen and (max-width: 400px)
-    .status
-        font-size: 10px
-    .contact
-        font-size: 15px
-    .profiles
-        .link
-            padding: 5px
-            width: 65%
-            i
-                font-size: 10px
-            p
-                font-size: 10px
-
-@media only screen and (max-width: 300px)
-    .contact
-        font-size: 14px
-    .profiles
-        .link
-            padding: 5px
-            width: 70%
-            i
-                font-size: 9px
-            p
-                font-size: 9.7px
-
-

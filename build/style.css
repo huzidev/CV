@@ -7,18 +7,23 @@
 }
 
 :root {
+  --heading-font-size: 25px;
+  --base-font-size: 16px;
+  --primary-color: #000;
   --color: #000;
+  --primary-font-weight: 600;
   --surface: #fff;
   --background: #f0f0f0;
   --border: #efefef;
   --shadow: rgba(0,0,0,0.05);
-  --width: 1100px;
+  --max-width: 1200px;
   --padding: 25px 0px;
+  --container-padding: 25px 0px;
   --margin-bottom: 20px;
+  --container-margin: 20px;
   --margin: auto;
-  --font-weight: 600;
+  --base-font-weight: 600;
   --font-size: 25px;
-  --letter-spacing: 1px;
 }
 
 body {
@@ -26,177 +31,79 @@ body {
   font-family: "Muli", sans-serif;
 }
 
-.status {
-  font-size: 16px;
-  font-weight: var(--font-weight);
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h3 {
+  font-size: var(--base-font-size);
+  font-weight: var(--base-font-weight);
 }
 
 .contact {
-  font-size: 19px;
+  font-size: calc(var(--base-font-size) + 3px);
   font-weight: 500;
   margin: 13px 0px 4px 0px;
 }
 
 .profiles a {
   text-decoration: none;
-}
-.profiles .link {
   color: var(--color);
-  width: 27%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 30px;
   text-align: center;
   border-radius: 9px;
   border: 1px solid var(--border);
-  padding: 10px;
-  margin: 10px 0px;
-  font-weight: var(--font-weight);
+  padding: 10px 20px;
+  margin: 13px 0px;
+  font-weight: var(--base-font-weight);
   cursor: pointer;
   -webkit-box-shadow: 1px 1px 2px var(--shadow);
           box-shadow: 1px 1px 2px var(--shadow);
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
-.profiles .link i {
-  width: 10%;
-  font-size: 16px;
-  margin-left: 5px;
+@media (max-width: 550px) {
+  .profiles a {
+    padding: 10px;
+    gap: 20px;
+  }
 }
-.profiles .link p {
-  width: 90%;
+.profiles a i {
+  -webkit-box-flex: 0.1;
+      -ms-flex: 0.1;
+          flex: 0.1;
   font-size: 16px;
+}
+.profiles a p {
+  -webkit-box-flex: 0.8;
+      -ms-flex: 0.8;
+          flex: 0.8;
+  font-size: var(--base-font-size);
   font-weight: var(--font-weight);
 }
-.profiles .link:hover {
+.profiles a:hover {
   -webkit-box-shadow: 2px 2px 4px 1px var(--shadow);
           box-shadow: 2px 2px 4px 1px var(--shadow);
 }
 
-@media only screen and (max-width: 1150px) {
-  .status {
-    font-size: 15px;
-  }
-  .contact {
-    font-size: 18.5px;
-  }
-  .profiles .link {
-    width: 28%;
-  }
-  .profiles .link i {
-    font-size: 15px;
-  }
-  .profiles .link p {
-    font-size: 14px;
-  }
-}
-@media only screen and (max-width: 950px) {
-  .status {
-    font-size: 14px;
-  }
-  .contact {
-    font-size: 18px;
-  }
-  .profiles .link {
-    width: 31%;
-  }
-  .profiles .link i {
-    font-size: 14px;
-  }
-  .profiles .link p {
-    font-size: 13px;
-  }
-}
-@media only screen and (max-width: 800px) {
-  .status {
-    font-size: 13px;
-  }
-  .contact {
-    font-size: 17.5px;
-  }
-  .profiles .link {
-    padding: 8px;
-    width: 37%;
-  }
-  .profiles .link i {
-    font-size: 13px;
-  }
-  .profiles .link p {
-    font-size: 12px;
-  }
-}
-@media only screen and (max-width: 650px) {
-  .status {
-    font-size: 12px;
-  }
-  .contact {
-    font-size: 17px;
-  }
-  .profiles .link {
-    padding: 7px;
-    width: 39%;
-  }
-  .profiles .link i {
-    font-size: 12px;
-  }
-  .profiles .link p {
-    font-size: 11px;
-  }
-}
-@media only screen and (max-width: 550px) {
-  .status {
-    font-size: 11px;
-  }
-  .contact {
-    font-size: 16px;
-  }
-  .profiles .link {
-    padding: 6px;
-    width: 53%;
-  }
-  .profiles .link i {
-    font-size: 11px;
-  }
-  .profiles .link p {
-    font-size: 10px;
-  }
-}
-@media only screen and (max-width: 400px) {
-  .status {
-    font-size: 10px;
-  }
-  .contact {
-    font-size: 15px;
-  }
-  .profiles .link {
-    padding: 5px;
-    width: 65%;
-  }
-  .profiles .link i {
-    font-size: 10px;
-  }
-  .profiles .link p {
-    font-size: 10px;
-  }
-}
-@media only screen and (max-width: 300px) {
-  .contact {
-    font-size: 14px;
-  }
-  .profiles .link {
-    padding: 5px;
-    width: 70%;
-  }
-  .profiles .link i {
-    font-size: 9px;
-  }
-  .profiles .link p {
-    font-size: 9.7px;
-  }
-}
 p {
   font-size: 14px;
   font-weight: 900;
@@ -548,76 +455,34 @@ p {
 }
 .container {
   background: var(--surface);
+  padding: 25px 0px;
+  margin-bottom: 20px;
   -webkit-box-shadow: 0 2px 4px var(--shadow);
           box-shadow: 0 2px 4px var(--shadow);
-  padding: var(--padding);
-  margin-bottom: var(--margin-bottom);
+}
+@media (max-width: 550px) {
+  .container {
+    padding: 20px 0px;
+  }
 }
 
 .wrapper {
-  width: var(--width);
-  margin: var(--margin);
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0px 100px;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0px 50px;
+  }
+}
+@media (max-width: 550px) {
+  .wrapper {
+    padding: 0px 25px;
+  }
 }
 
 .heading {
-  font-size: var(--font-size);
-  font-weight: var(--font-weight);
-  letter-spacing: var(--letter-spacing);
-}
-
-@media only screen and (max-width: 1150px) {
-  .wrapper {
-    width: 900px;
-  }
-  .heading {
-    font-size: 24px;
-  }
-}
-@media only screen and (max-width: 950px) {
-  .wrapper {
-    width: 750px;
-  }
-  .heading {
-    font-size: 23px;
-  }
-}
-@media only screen and (max-width: 800px) {
-  .wrapper {
-    width: 600px;
-  }
-  .heading {
-    font-size: 22px;
-  }
-}
-@media only screen and (max-width: 650px) {
-  .wrapper {
-    width: 500px;
-  }
-  .heading {
-    font-size: 21px;
-  }
-}
-@media only screen and (max-width: 550px) {
-  .wrapper {
-    width: 350px;
-  }
-  .heading {
-    font-size: 20px;
-  }
-}
-@media only screen and (max-width: 400px) {
-  .wrapper {
-    width: 270px;
-  }
-  .heading {
-    font-size: 19px;
-  }
-}
-@media only screen and (max-width: 300px) {
-  .wrapper {
-    width: 230px;
-  }
-  .heading {
-    font-size: 18px;
-  }
+  font-size: var(--heading-font-size);
+  font-weight: var(--base-font-weight);
 }

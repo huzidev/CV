@@ -1,57 +1,22 @@
 .container
     background: var(--surface)
-    box-shadow: 0 2px 4px  var(--shadow)
-    padding: var(--padding)
-    margin-bottom: var(--margin-bottom)
+    padding: 25px 0px
+    margin-bottom: 20px
+    box-shadow: 0 2px 4px var(--shadow)
+
+    @include breakpoint(sm)
+        padding: 20px 0px
 
 .wrapper
-    width: var(--width)
-    margin: var(--margin)
+    max-width: var(--max-width)
+    margin: auto
+    padding: 0px 100px
+
+    @include breakpoint(md) 
+        padding: 0px 50px
+    
+    @include breakpoint(sm)
+        padding: 0px 25px
 
 .heading
-    font-size: var(--font-size)
-    font-weight: var(--font-weight)
-    letter-spacing: var(--letter-spacing)
-
-
-@media only screen and (max-width: 1150px)
-    .wrapper
-        width: 900px
-    .heading
-        font-size: 24px
-
-@media only screen and (max-width: 950px)
-    .wrapper
-        width: 750px
-    .heading
-        font-size: 23px
-
-@media only screen and (max-width: 800px)
-    .wrapper
-        width: 600px
-    .heading
-        font-size: 22px
-
-@media only screen and (max-width: 650px)
-    .wrapper
-        width: 500px
-    .heading
-        font-size: 21px
-
-@media only screen and (max-width: 550px)
-    .wrapper
-        width: 350px
-    .heading
-        font-size: 20px
-
-@media only screen and (max-width: 400px)
-    .wrapper
-        width: 270px
-    .heading
-        font-size: 19px
-
-@media only screen and (max-width: 300px)
-    .wrapper
-        width: 230px
-    .heading
-        font-size: 18px
+    @include heading-properties(var(--heading-font-size), var(--base-font-weight))
