@@ -1,41 +1,44 @@
 @import "global/mixins.sass"
 
-.content
-    @include flex-properties(column, normal, flex-start)
+.profile 
+    &__content
+        display: none
+        @include flex-properties(column, normal, flex-start)
 
-h3
-    @include heading-properties(var(--base-font-size), var(--base-font-weight))
+        h3
+            @include heading-properties(var(--base-font-size), var(--base-font-weight))
 
-.contact
-    @include heading-properties(calc(var(--base-font-size) + 3px), 500)
-    margin: 13px 0px 4px 0px
+        .contact
+            @include heading-properties(calc(var(--base-font-size) + 3px), 500)
+            margin: 13px 0px 4px 0px
 
-.profiles
-    a
-        text-decoration: none
-        color: var(--color)
-        display: flex
-        align-items: center
-        gap: 30px
-        text-align: center
-        border-radius: 9px
-        border: 1px solid var(--border)
-        padding: 10px 20px
-        margin: 13px 0px
-        font-weight: var(--base-font-weight)
-        cursor: pointer
-        box-shadow: 1px 1px 2px var(--shadow)
-        transition: all 250ms ease-in-out
+        .profiles
+            a
+                text-decoration: none
+                color: var(--color)
+                display: flex
+                align-items: center
+                gap: 30px
+                text-align: center
+                border-radius: 9px
+                border: 1px solid var(--border)
+                padding: 10px 20px
+                margin: 13px 0px
+                font-weight: var(--base-font-weight)
+                cursor: pointer
+                box-shadow: 1px 1px 2px var(--shadow)
+                transition: all 250ms ease-in-out
 
-        @include breakpoint(sm) 
-            padding: 10px
-            gap: 20px
-        i
-            flex: 0.1
-            font-size: 16px
-        p   
-            flex: 0.8
-            font-size: var(--base-font-size)
-            font-weight: var(--font-weight)
-        &:hover
-            box-shadow: 2px 2px 4px 1px var(--shadow)
+                @include breakpoint(sm) 
+                    padding: 10px
+                    gap: 20px
+
+                i
+                    flex: 0.1
+                    font-size: 16px
+                p   
+                    flex: 0.8
+                    font-size: var(--base-font-size)
+                    font-weight: var(--font-weight)
+                &:hover
+                    box-shadow: 2px 2px 4px 1px var(--shadow)

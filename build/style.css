@@ -31,7 +31,8 @@ body {
   font-family: "Muli", sans-serif;
 }
 
-.content {
+.profile__content {
+  display: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,19 +47,16 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-
-h3 {
+.profile__content h3 {
   font-size: var(--base-font-size);
   font-weight: var(--base-font-weight);
 }
-
-.contact {
+.profile__content .contact {
   font-size: calc(var(--base-font-size) + 3px);
   font-weight: 500;
   margin: 13px 0px 4px 0px;
 }
-
-.profiles a {
+.profile__content .profiles a {
   text-decoration: none;
   color: var(--color);
   display: -webkit-box;
@@ -81,73 +79,36 @@ h3 {
   transition: all 250ms ease-in-out;
 }
 @media (max-width: 550px) {
-  .profiles a {
+  .profile__content .profiles a {
     padding: 10px;
     gap: 20px;
   }
 }
-.profiles a i {
+.profile__content .profiles a i {
   -webkit-box-flex: 0.1;
       -ms-flex: 0.1;
           flex: 0.1;
   font-size: 16px;
 }
-.profiles a p {
+.profile__content .profiles a p {
   -webkit-box-flex: 0.8;
       -ms-flex: 0.8;
           flex: 0.8;
   font-size: var(--base-font-size);
   font-weight: var(--font-weight);
 }
-.profiles a:hover {
+.profile__content .profiles a:hover {
   -webkit-box-shadow: 2px 2px 4px 1px var(--shadow);
           box-shadow: 2px 2px 4px 1px var(--shadow);
 }
 
-p {
-  font-size: 14px;
+.intro__content p {
+  font-size: calc(var(--base-font-size) - 2px);
   font-weight: 900;
+  line-height: 1.7;
+  margin: 10px 0px;
 }
 
-.intro {
-  margin: 8px 0px;
-}
-
-@media only screen and (max-width: 1150px) {
-  p {
-    font-size: 14px;
-  }
-}
-@media only screen and (max-width: 950px) {
-  p {
-    font-size: 13.5px;
-  }
-}
-@media only screen and (max-width: 800px) {
-  p {
-    font-size: 13px;
-  }
-}
-@media only screen and (max-width: 650px) {
-  p {
-    font-size: 12.8px;
-  }
-}
-@media only screen and (max-width: 550px) {
-  p {
-    font-size: 12.3px;
-  }
-}
-@media only screen and (max-width: 400px) {
-  p {
-    font-size: 12px;
-  }
-}
-@media only screen and (max-width: 300px) {
-  p {
-    font-size: 11.7px;
-  }
-}
 .front-end-skills, .back-end-skills {
   width: 100%;
   margin-top: 8px;
