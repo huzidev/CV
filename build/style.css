@@ -108,27 +108,23 @@ body {
   line-height: 1.7;
   margin: 10px 0px;
 }
+.intro__content p:last-child {
+  margin-bottom: 0px;
+}
 
-.front-end-skills, .back-end-skills {
+.skills__content .skills-container {
   width: 100%;
   margin-top: 8px;
 }
-.front-end-skills .set, .back-end-skills .set {
+.skills__content .skills-container > div {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
-.front-end-skills .set .cover, .back-end-skills .set .cover {
-  display: inline-block;
+.skills__content .skills-container > div .wrapper {
   cursor: pointer;
   border-radius: 3px;
   border: 1px solid var(--border);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 12px 17px;
   line-height: 8px;
   margin: 0px 10px 10px 0px;
@@ -137,66 +133,16 @@ body {
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
-.front-end-skills .set .cover:hover, .back-end-skills .set .cover:hover {
+.skills__content .skills-container > div .wrapper:hover {
   -webkit-box-shadow: 0px 0px 4px 2px var(--shadow);
           box-shadow: 0px 0px 4px 2px var(--shadow);
 }
-.front-end-skills .set .cover p, .back-end-skills .set .cover p {
-  font-size: 12px;
+.skills__content .skills-container > div .wrapper p {
+  font-size: calc(var(--base-font-size) - 4px);
   font-weight: 700;
 }
 
-@media only screen and (max-width: 1150px) {
-  .front-end-skills .set .cover p, .back-end-skills .set .cover p {
-    font-size: 11.8px;
-  }
-}
-@media only screen and (max-width: 950px) {
-  .front-end-skills .set .cover p, .back-end-skills .set .cover p {
-    font-size: 11.3px;
-  }
-}
-@media only screen and (max-width: 800px) {
-  .front-end-skills .set .cover, .back-end-skills .set .cover {
-    padding: 11px 15px;
-  }
-  .front-end-skills .set .cover p, .back-end-skills .set .cover p {
-    font-size: 11px;
-  }
-}
-@media only screen and (max-width: 650px) {
-  .front-end-skills .set .cover, .back-end-skills .set .cover {
-    padding: 10px 17px;
-  }
-  .front-end-skills .set .cover p, .back-end-skills .set .cover p {
-    font-size: 10.8px;
-  }
-}
-@media only screen and (max-width: 550px) {
-  .front-end-skills .set .cover, .back-end-skills .set .cover {
-    padding: 9.5px 15px;
-  }
-  .front-end-skills .set .cover p, .back-end-skills .set .cover p {
-    font-size: 10.3px;
-  }
-}
-@media only screen and (max-width: 400px) {
-  .front-end-skills .set .cover, .back-end-skills .set .cover {
-    padding: 9px 17px;
-  }
-  .front-end-skills .set .cover p, .back-end-skills .set .cover p {
-    font-size: 10px;
-  }
-}
-@media only screen and (max-width: 300px) {
-  .front-end-skills .set .cover, .back-end-skills .set .cover {
-    padding: 8px 16px;
-  }
-  .front-end-skills .set .cover p, .back-end-skills .set .cover p {
-    font-size: 9.8px;
-  }
-}
-.education-container {
+.education__content .education-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,80 +153,25 @@ body {
   gap: 5px;
   padding: 0px;
 }
-.education-container .education-place {
+.education__content .education-container .education-place {
   margin: 8px 0px;
 }
-.education-container .education-place .institute {
-  margin-bottom: 5px;
-  font-size: 19px;
-  font-weight: var(--font-weight);
-  letter-spacing: 1.2px;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+.education__content .education-container .education-place:last-child {
+  margin: 0px;
 }
-.education-container .education-place p {
-  font-size: 16px;
+.education__content .education-container .education-place h1 {
+  margin-bottom: 5px;
+  font-size: calc(var(--base-font-size) + 3px);
+  font-weight: 600;
+  text-decoration: underline;
+}
+.education__content .education-container .education-place p {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: var(--base-font-size);
   font-weight: 800;
-  letter-spacing: 0.7px;
   margin: 3px 0px;
 }
 
-@media only screen and (max-width: 1150px) {
-  .education-container .education-place .institute {
-    font-size: 18.7px;
-  }
-  .education-container .education-place p {
-    font-size: 15.7px;
-  }
-}
-@media only screen and (max-width: 950px) {
-  .education-container .education-place .institute {
-    font-size: 18.2px;
-  }
-  .education-container .education-place p {
-    font-size: 15.2px;
-  }
-}
-@media only screen and (max-width: 800px) {
-  .education-container .education-place .institute {
-    font-size: 17.7px;
-  }
-  .education-container .education-place p {
-    font-size: 14.7px;
-  }
-}
-@media only screen and (max-width: 650px) {
-  .education-container .education-place .institute {
-    font-size: 16.7px;
-  }
-  .education-container .education-place p {
-    font-size: 13.7px;
-  }
-}
-@media only screen and (max-width: 550px) {
-  .education-container .education-place .institute {
-    font-size: 16.2px;
-  }
-  .education-container .education-place p {
-    font-size: 13.2px;
-  }
-}
-@media only screen and (max-width: 400px) {
-  .education-container .education-place .institute {
-    font-size: 16.7px;
-  }
-  .education-container .education-place p {
-    font-size: 12.7px;
-  }
-}
-@media only screen and (max-width: 300px) {
-  .education-container .education-place .institute {
-    font-size: 15.2px;
-  }
-  .education-container .education-place p {
-    font-size: 12.2px;
-  }
-}
 .footer-container {
   background: var(--surface);
   padding: var(--padding);

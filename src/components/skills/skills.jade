@@ -1,77 +1,18 @@
+- var frontendSkills = [{ label: 'HTML' },{ label: 'CSS' },{ label: 'Jade/Pug' },{ label: 'Sass/Scss' }, { label: 'Javascript' },{ label: 'Typescript' }, { label: 'Styled-components' },{ label: 'Bootstrap' },{ label: 'Tailwind CSS' },{ label: 'ReactJS' },{ label: 'Redux' },{ label: 'Material UI' },{ label: 'Ant-Design' }]
+- var backendSkills = [{ label: 'NodeJS' },{ label: 'ExpressJS' }, { label: 'RemixJS' }, { label: 'AdonisJS' }, { label: 'MongoDB' },{ label: 'mySQL' },{ label: 'Git' }]
+
+
 .container
     .wrapper
-        h1.heading Skills
-        .front-end-skills 
-            .set 
-                .cover
-                    //- i(class="fa fa-html5")
-                    p HTML
-            .set 
-                .cover
-                    //- i(class="fa fa-css3")
-                    p CSS
-            .set 
-                .cover
-                    //- i(class="fa fa-github")
-                    p Jade/Pug
-            .set 
-                .cover
-                    //- i(class="fa fa-github")
-                    p Sass
-            .set 
-                .cover
-                    //- i(class="fa fa-github")
-                    p Styled-components
-            .set 
-                .cover
-                    //- i(class="fa fa-github")
-                    p Bootstrap
-            .set 
-                .cover
-                    //- i(class="fa fa-github")
-                    p Tailwind CSS
-            .set 
-                .cover
-                    //- i(class="fa fa-github")
-                    p Javascript
-            .set 
-                .cover
-                    //- i(class="fa fa-github")
-                    p Typescript
-            .set 
-                .cover
-                    //- i(class="fa fa-github")
-                    p ReactJS
-            .set 
-                .cover
-                    //- i(class="fa fa-github")
-                    p Redux
-            .set 
-                .cover
-                    //- i(class="fa fa-github")
-                    p Material UI
-            .set 
-                .cover
-                    //- i(class="fa fa-github")
-                    p Ant-Design
-        .back-end-skills 
-            .set 
-                .cover
-                    //- i(class="fa fa-github")
-                    p NodeJS
-            .set 
-                .cover
-                    //- i(class="fa fa-github")
-                    p ExpressJS
-            .set 
-                .cover
-                    //- i(class="fa fa-github")
-                    p MongoDB
-            .set 
-                .cover
-                    //- i(class="fa fa-github")
-                    p mySQL
-            .set 
-                .cover
-                    //- i(class="fa fa-github")
-                    p Git
+        .skills__content
+            h1.heading Skills
+                .skills-container
+                    each skill in frontendSkills
+                        div
+                            .wrapper
+                                p= skill.label
+                .skills-container
+                    each skill in backendSkills
+                        div
+                            .wrapper
+                                p= skill.label

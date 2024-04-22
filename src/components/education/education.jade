@@ -1,14 +1,13 @@
+- var educationData = [{institute: 'College',place: 'N.J.V Higher Secondary School, Karachi',course: 'Pre-medical',duration: 'Oct 2018 - Feb 2020 '},{institute: 'University',place: 'Sindh Madressa-tul-Islam University, Karachi', course: 'BSCS',duration: 'Feb 2022 - 2026'}]
+
 .container
     .wrapper
-        h1.heading Education
-        .education-container
-            .education-place 
-                h1.institute College
-                p N.J.V Higher Secondary School 
-                p Subject: Pre-medical
-                p Oct 2018 - Feb 2020 
-            .education-place 
-                h1.institute University
-                p Sindh Madressa-tul-Islam University, Karachi
-                p Department: BSCS
-                p Feb 2022 - 2026 
+        .education__content
+            h1.heading Education
+            .education-container
+                each education in educationData
+                    .education-place
+                        h1= education.institute
+                        p= education.place
+                        p= education.course
+                        p= education.duration

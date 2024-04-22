@@ -1,3 +1,5 @@
+- var data = [{ link: 'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=huzaifa.iqdev@gmail.com', label: 'huzaifa.iqdev@gmail.com', icon: 'fa fa-envelope' },{ link: 'tel:+92 335 2539311', label: '+92 335 2539311', icon: 'fa fa-phone' },{ link: 'https://www.linkedin.com/in/huzidev/', label: 'LinkedIn profile', icon: 'fa fa-linkedin' },{ link: 'https://github.com/huzidev/', label: 'Github profile', icon: 'fa fa-github' }]
+
 .container
     .wrapper
         .profile__content
@@ -5,15 +7,7 @@
             h3 Full Stack Web Developer
             h1.contact Contacts and Profiles
             .profiles 
-                a(href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=huzaifa.iqdev@gmail.com" target="_blank")
-                    i(class="fa fa-envelope")
-                    p huzaifa.iqdev@gmail.com
-                a(href="tel:+92 335 2539311")
-                    i(class="fa fa-phone")
-                    p +92 335 2539311
-                a(href="https://www.linkedin.com/in/huzidev/" target="_blank")
-                    i(class="fa fa-linkedin")
-                    p LinkedIn profile
-                a(href="https://github.com/huzidev/" target="_blank")
-                    i(class="fa fa-github")
-                    p Github profile
+                each item in data
+                    a(href=item.link target="_blank")
+                        i(class=item.icon)
+                        p= item.label

@@ -1,7 +1,8 @@
+- var data = ["Hello! My name is Huzaifa Iqbal. I'm 21 years old Full-Stack Engineer born and raised in Karachi. Currently, I am working as an Intern Junior Developer at Signature Works LLC. In this role, I use React, Remix, Shopify, and MySQL.","I find joy in solving coding problems on platforms like LeetCode to enhance my programming knowledge and polish my skills.","Apart from my professional life, I am fond of playing games and Some of my all-time favorite games are Counter-Strike 1.6, GTA V, Clash Royale, Clash Of Clans and Age of Empires III. I have also completed the stories of GTA IV, GTA V, Cyberpunk 2077, Stray, Tomb Raider, Rise Of The Tomb Raider, and Age Of Empires III. Nowadays, in my free time, I'm playing Shadow Of The Tomb Raider."]
+
 .container
     .wrapper
         .intro__content
             h1.heading Introduction
-            p Hello! My name is Huzaifa Iqbal. I'm 21 years old Full-Stack Engineer born and raised in Karachi. Currently, I am working as an Intern Junior Developer at Signature Works LLC. In this role, I use React, Remix, Shopify, and MySQL. 
-            p I find joy in solving coding problems on platforms like LeetCode to enhance my programming knowledge and polish my skills.
-            p Apart from my professional life, I am fond of playing games and Some of my all-time favorite games are Counter-Strike 1.6, GTA V, Clash Royale, Clash Of Clans and Age of Empires III. I have also completed the stories of GTA IV, GTA V, Cyberpunk 2077, Stray, Tomb Raider, Rise Of The Tomb Raider, and Age Of Empires III. Nowadays, in my free time, I'm playing Shadow Of The Tomb Raider.
+            each paragraph in data
+                p= paragraph
