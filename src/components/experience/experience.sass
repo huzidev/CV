@@ -1,0 +1,17 @@
+.experience
+    &__content
+        .experience-details
+            margin-top: 15px
+            @include flex-properties(row, space-between, flex-start)
+            .company-info
+                flex: 0.3
+                .company
+                    margin-bottom: 3px
+                .role 
+                    color: rgba(0, 0, 0, 0.7)
+                    font-size: var(--base-font-size)
+                .duration
+                    font-size: calc(var(--base-font-size) - 2px )
+                    margin-bottom: 10px 
+            .features-info
+                flex: 0.7

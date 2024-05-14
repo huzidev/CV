@@ -1,14 +1,24 @@
+- var signatureWorksTechnologies = [{ label: 'ReactJS' }, { label: 'RemixJS' }, { label: 'Shopify' }, { label: 'Sass/Scss' }, { label: 'Bootstrap' }, { label: 'Sass/Scss' }, { label: 'Prisma' }, { label: 'MySQL' }]
+- var signatureWorksFeatures = [{ feature: 'Worked Remotely as Internt Junior Developer to build Full Stack web applications with responsive designs' }, { feature: 'Uses Remix as backend with React JS' }, { feature: 'Uses Prisma to manage databases and (CRUD) Operations' }]
+- var experienceData = [{company: 'Signature Works LLC',role: 'Intern Junior Developer', duration: 'Dec 2023 - Present', technologies: signatureWorksTechnologies, features: signatureWorksFeatures}]
+
 .container 
     .wrapper 
         .experience__content
             h1.heading Experience
-            .experience__content-container
-                .company-info
-                    div 
-                        p Company
-                        p.role Developer 
-                        p
-                    div 
-                        p Technologies: 
-                        .skills-container
-                            p React
+            .experience-details
+                each data in experienceData
+                    .company-info
+                        div 
+                            p.focus.company= data.company
+                            p.focus.role= data.role  
+                            p.focus.duration= data.duration
+                        div 
+                            p.focus Technologies: 
+                            .skills-container
+                                each technologies in data.technologies
+                                    span= technologies.label
+                    .features-info
+                        ul
+                            each features in data.features
+                            li= features.feature

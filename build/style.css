@@ -305,6 +305,44 @@ body {
     font-size: 14px;
   }
 }
+.experience__content .experience-details {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.experience__content .experience-details .company-info {
+  -webkit-box-flex: 0.3;
+      -ms-flex: 0.3;
+          flex: 0.3;
+}
+.experience__content .experience-details .company-info .company {
+  margin-bottom: 3px;
+}
+.experience__content .experience-details .company-info .role {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: var(--base-font-size);
+}
+.experience__content .experience-details .company-info .duration {
+  font-size: calc(var(--base-font-size) - 2px);
+  margin-bottom: 10px;
+}
+.experience__content .experience-details .features-info {
+  -webkit-box-flex: 0.7;
+      -ms-flex: 0.7;
+          flex: 0.7;
+}
+
 .container {
   background: var(--surface);
   padding: 25px 0px;
@@ -337,4 +375,8 @@ body {
 .heading {
   font-size: var(--heading-font-size);
   font-weight: var(--base-font-weight);
+}
+
+.focus {
+  font-weight: 800;
 }
