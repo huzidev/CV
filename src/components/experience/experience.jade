@@ -1,6 +1,6 @@
-- var signatureWorksTechnologies = [{ label: 'ReactJS' }, { label: 'RemixJS' }, { label: 'Shopify' }, { label: 'Sass/Scss' }, { label: 'Bootstrap' }, { label: 'Sass/Scss' }, { label: 'Prisma' }, { label: 'MySQL' }]
-- var signatureWorksFeatures = [{ feature: 'Worked Remotely as Internt Junior Developer to build Full Stack web applications with responsive designs' }, { feature: 'Uses Remix as backend with React JS' }, { feature: 'Uses Prisma to manage databases and (CRUD) Operations' }]
-- var experienceData = [{company: 'Signature Works LLC',role: 'Intern Junior Developer', duration: 'Dec 2023 - Present', technologies: signatureWorksTechnologies, features: signatureWorksFeatures}]
+- var signatureWorksTechnologies = [{ label: 'ReactJS' }, { label: 'RemixJS' }, { label: 'Shopify' }, { label: 'SASS/SCSS' }, { label: 'Bootstrap' }, { label: 'Prisma' }, { label: 'MySQL' }, { label: 'Strapi (CMS)' }]
+- var signatureWorksFeatures = [{ feature: 'Currently working remotely as Intern Junior Developer for developing full-stack web applications with responsive designs.' }, { feature: 'Uses Remix as backend with React JS for frontend.' }, { feature: 'Managing databases and performing (CRUD) operations using Prisma.' }, { feature: 'Making and integrating API calls to fetch and send data between frontend and backend.' }, { feature: 'Debugging and troubleshooting issues to improve application performance and UX.' }]
+- var experienceData = [{company: 'Signature Works LLC', role: 'Intern Junior Developer', duration: 'Dec 2023 - Present', technologies: signatureWorksTechnologies, features: signatureWorksFeatures}]
 
 .container 
     .wrapper 
@@ -13,12 +13,12 @@
                             p.focus.company= data.company
                             p.focus.role= data.role  
                             p.focus.duration= data.duration
-                        div 
                             p.focus Technologies: 
                             .skills-container
-                                each technologies in data.technologies
-                                    span= technologies.label
+                                each technologies, i in data.technologies
+                                    div
+                                        span.focus= technologies.label + (i !== data.technologies.length - 1 ? ',' : '')
                     .features-info
                         ul
                             each features in data.features
-                            li= features.feature
+                                li= features.feature

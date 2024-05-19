@@ -3,15 +3,33 @@
         .experience-details
             margin-top: 15px
             @include flex-properties(row, space-between, flex-start)
+
+            @include breakpoint(md) 
+                flex-direction: column
+                gap: 20px
             .company-info
                 flex: 0.3
                 .company
                     margin-bottom: 3px
-                .role 
+                .role   
                     color: rgba(0, 0, 0, 0.7)
                     font-size: var(--base-font-size)
                 .duration
                     font-size: calc(var(--base-font-size) - 2px )
-                    margin-bottom: 10px 
+                    margin-bottom: 10px
+                .skills-container 
+                    padding-top: 3px
+                    div
+                        display: inline-block
+                        padding-right: 3px
+                        span
+                            color: rgba(0, 0, 0, 0.7)
+                            font-size: var(--base-font-size)
             .features-info
-                flex: 0.7
+                flex: 0.6
+                ul 
+                    @include breakpoint(md)
+                        padding-left: 15px
+                    li
+                        font-weight: 600 
+                        padding: 3px 0px
