@@ -1,15 +1,17 @@
 # Huzi-Dev CV
-Web based CV created with Jade(pug) and Sass with prepros compiler.
+
+A web-based CV created using Jade (Pug) and Sass, compiled with Prepros.
 
 ## Technologies
 
-- Jade(pug)
-- Sass
-- prepros (compiler)
+- **Jade (Pug)**
+- **Sass**
+- **Prepros** (compiler)
 
 ## CV Includes
 
-- Contact and Profiles
-- Skills
-- Education details
-- Download button for downloading CV in jpeg and pdf form
+- **Contact and Profiles**
+- **Skills**
+- **Education Details**
+- **Experience**
+- **Download Button** for downloading the CV in JPEG and PDF formats
