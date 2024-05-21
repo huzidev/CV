@@ -1,8 +1,10 @@
-.footer-container
-    .button-cover 
-        a.jpeg(href="./assets/huzidev-cv.jpeg" download="" title="Download complete CV in Jpeg")
-            i(class="fa fa-image")
-            p Download JPEG
-        a.pdf(href="./assets/huzidev-cv.pdf" download="" title="Download complete CV in pdf")
-            i(class="fa fa-file-pdf")
-            p Download PDF
+- var buttons = [{label: 'Download JPEG', href: './assets/huzidev-cv.jpeg', title: 'Download CV in Jpeg', icon: 'fa fa-image'}, {label: 'Download PDF', href: './assets/huzidev-cv.pdf', title: 'Download CV in pdf', icon: 'fa fa-file-pdf'},]
+
+.footer__container
+    .wrapper
+        .footer__content
+            div.btn
+                each button in buttons
+                    a(href=button.href download="" title=button.title)
+                        i(class=button.icon)
+                        p= button.label

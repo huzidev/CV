@@ -14,20 +14,13 @@
 
         .profiles
             a
-                text-decoration: none
-                color: var(--color)
-                display: flex
-                align-items: center
-                gap: 30px
-                text-align: center
-                border-radius: 9px
+                @include flex-properties(row, normal, center)
+                @include button-properties(var(--base-font-size), 30px, 9px)
                 border: 1px solid var(--border)
+                text-align: center
                 padding: 10px 20px
                 margin: 13px 0px
-                font-weight: var(--base-font-weight)
-                cursor: pointer
                 box-shadow: 1px 1px 2px var(--shadow)
-                transition: all 250ms ease-in-out
 
                 @include breakpoint(sm) 
                     padding: 10px
@@ -38,7 +31,5 @@
                     font-size: 16px
                 p   
                     flex: 0.8
-                    font-size: var(--base-font-size)
-                    font-weight: var(--font-weight)
                 &:hover
                     box-shadow: 2px 2px 4px 1px var(--shadow)

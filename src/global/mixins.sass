@@ -8,6 +8,17 @@
   font-size: $font-size
   font-weight: $font-weight
 
+@mixin button-properties($font-size, $gap, $radius)
+  cursor: pointer
+  font-size: $font-size
+  text-decoration: none
+  gap: $gap
+  border-radius: $radius
+  color: var(--primary-color)
+  font-weight: var(--base-font-weight)
+  transition: all 250ms ease-in-out
+  
+
 @mixin mediaQuery($point)
   @media (max-width: $point)
     @content
