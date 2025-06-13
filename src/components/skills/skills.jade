@@ -1,18 +1,48 @@
-- var frontendSkills = [{ label: 'HTML' },{ label: 'CSS' },{ label: 'Jade/Pug' },{ label: 'SASS/SCSS' }, { label: 'Javascript' },{ label: 'Typescript' }, { label: 'Styled-components' },{ label: 'Bootstrap' },{ label: 'Tailwind CSS' },{ label: 'ReactJS' },{ label: 'Redux' },{ label: 'Material UI' },{ label: 'Ant-Design' }]
-- var backendSkills = [{ label: 'NodeJS' },{ label: 'ExpressJS' }, { label: 'RemixJS' }, { label: 'AdonisJS' }, { label: 'MongoDB' },{ label: 'mySQL' }, { label: 'Strapi (CMS)' }, { label: 'Git' }]
+- var frontendSkills = [
+    { label: 'TypeScript' },
+    { label: 'Jade/Pug' },
+    { label: 'SASS/SCSS' },
+    { label: 'Styled-components' },
+    { label: 'Bootstrap' },
+    { label: 'Tailwind CSS' },
+    { label: 'ReactJS' },
+    { label: 'Redux' },
+    { label: 'NextJS' },
+    { label: 'RemixJS' },
+    { label: 'Material UI' },
+    { label: 'Ant Design' }
+  ]
 
+- var backendSkills = [
+    { label: 'NodeJS' },
+    { label: 'ExpressJS' },
+    { label: 'AdonisJS' },
+    { label: 'Prisma ORM' },
+    { label: 'Sequelize ORM' },
+    { label: 'MongoDB' },
+    { label: 'PostgreSQL' },
+    { label: 'MySQL' },
+    { label: 'SQLite' },
+    { label: 'Strapi (CMS)' },
+    { label: 'Git' },
+    { label: 'Docker' }
+  ]
 
 .container
-    .wrapper
-        .skills__content
-            h1.heading Skills
-                .skills-container
-                    each skill in frontendSkills
-                        div
-                            .wrapper
-                                p= skill.label
-                .skills-container
-                    each skill in backendSkills
-                        div
-                            .wrapper
-                                p= skill.label
+  .wrapper
+    .skills__content
+      h1.heading Skills
+
+      .skills-category Front-End
+      .skills-container
+        each skill in frontendSkills
+          div
+            .wrapper
+              p= skill.label
+
+      .skills-category Back-End & Tooling
+      .skills-container
+        each skill in backendSkills
+          div
+            .wrapper
+              p= skill.label
